@@ -1,0 +1,58 @@
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+
+      <!-- /.col-lg-3 -->
+
+    <% @socks.each do |sock| %>
+ <div class="col-lg-4 col-md-6 mb-4">
+        <div class="row">
+
+         
+            <div class="card h-100">
+              <a href="#">
+      
+            </a>
+              <div class="card-body">
+                <h4 class="card-title">
+        <td><%= link_to sock.title, sock %></td>
+                </h4>
+        <td><%= sock.price %> PLN </td>
+                <p class="card-text"><td><%= sock.description %></td></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        <td><%= link_to 'Show', sock %></td>
+        <td><%= link_to 'Edit', edit_sock_path(sock) %></td>
+        <td><%= link_to 'Destroy', sock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+<% end %>
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
