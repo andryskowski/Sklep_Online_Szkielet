@@ -15,7 +15,9 @@
          
             <div class="card h-100">
               <a href="#">
-      
+                <% if sock.image.attached? %>
+                   <%= image_tag(sock.image) %>
+                   <% end %>
             </a>
               <div class="card-body">
                 <h4 class="card-title">
